@@ -15,7 +15,7 @@ mongoose
 	.catch((err) => console.error(err))
 
 app.get('/api', (req, res) => {
-	res.json({ message: 'my first mern app - okay bye' })
+	res.json({ message: 'my first mern app xxxx' })
 })
 
 app.listen(PORT, () => console.log(`server is running on port ${PORT}`))
