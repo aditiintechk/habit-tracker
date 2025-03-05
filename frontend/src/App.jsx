@@ -1,18 +1,21 @@
-import { useEffect, useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home.jsx'
+import Login from './pages/Login.jsx'
+import Register from './pages/Register.jsx'
+import UserHome from './pages/UserHome.jsx'
+
 import './App.css'
 
 function App() {
-	const [message, setMessage] = useState('')
-
-	useEffect(() => {
-		fetch('/api')
-			.then((response) => response.json())
-			.then((data) => setMessage(data.message))
-	})
 	return (
-		<>
-			<h1>{message || 'Loading...'}</h1>
-		</>
+		<Router>
+			<Routes>
+				<Route path='/' element={<Home />} />
+				<Route path='/login' element={<Login />} />
+				<Route path='/register' element={<Register />} />
+				<Route path='/userhome' element={<UserHome />} />
+			</Routes>
+		</Router>
 	)
 }
 

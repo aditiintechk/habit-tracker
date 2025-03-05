@@ -15,7 +15,7 @@ mongoose
 	.catch((err) => console.error(err))
 
 app.get('/api', (req, res) => {
-	res.json({ message: 'my first mern app xxxx' })
+	res.json({ message: 'Implement Manual Authentication' })
 })
 
 app.listen(PORT, () => console.log(`server is running on port ${PORT}`))
